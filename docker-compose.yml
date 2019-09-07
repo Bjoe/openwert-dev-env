@@ -1,0 +1,24 @@
+version: "3.6"
+
+services:
+  openwrt-sdk:
+    image: openwrtorg/sdk:${SDKTAG}
+    user: 0:0
+    env_file: sdkenv.sh
+    environment:
+      - GROUP_ID=${GROUP_ID}
+      - USER_ID=${USER_ID}
+    volumes:
+      - ./bin:/home/build/openwrt/bin
+      - .:/development
+      - ./build-openwrt:/build
+      - ${SRC}:/source
+    entrypoint:
+      - bash 
+      - /development/set-environment.sh
+
+  openwrt-rootfs:
+      image: openwrtorg/rootfs:${ROOTFSTAG}
+
+  openwrt-image-build:
+      image: openwrtorg/imagebuilder:${IMAGETAG}
