@@ -17,8 +17,36 @@ services:
       - bash 
       - /development/set-environment.sh
 
+  openwrt-sdk-ide:
+    build:
+      context: .
+      dockerfile: Docker-ide-debian
+      args:
+        dockerimage: openwrtorg/sdk:${SDKTAG}
+    network_mode: "host"
+    privileged: true
+    security_opt:
+      - seccomp=unconfined
+    cap_add:
+      - SYS_PTRACE
+    devices:
+      - /dev/dri:/dev/dri
+    environment:
+      - GROUP_ID=${GROUP_ID}
+      - USER_ID=${USER_ID}
+      - SSH_AUTH_SOCK=${SSH_AUTH_SOCK}
+      - DISPLAY=${DISPLAY}
+    volumes:
+      - /dev/bus/usb:/dev/bus/usb
+      - .:/development
+      - $HOME:/home/$USER
+      - /tmp:/tmp
+    entrypoint:
+      - bash 
+      - /development/set-environment.sh
+
   openwrt-rootfs:
-      image: openwrtorg/rootfs:${ROOTFSTAG}
+    image: openwrtorg/rootfs:${ROOTFSTAG}
 
   openwrt-image-build:
-      image: openwrtorg/imagebuilder:${IMAGETAG}
+    image: openwrtorg/imagebuilder:${IMAGETAG}

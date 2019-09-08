@@ -7,4 +7,4 @@ fi
 
 USER_ID=$(id -u ${USER}) \
 GROUP_ID=$(id -g ${USER}) \
-docker-compose run --rm $@ openwrt-sdk
+docker-compose run --rm $@ openwrt-sdk-ide
