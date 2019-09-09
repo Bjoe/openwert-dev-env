@@ -16,7 +16,7 @@ RUN export DEBIAN_FRONTEND=noninteractive && apt update && \
   libgl1-mesa-dri \
   #libglvnd-dev 
   # Some tools
-  sudo tmux vim gdb \
+  sudo cmake tmux vim gdb \
   && \
   apt-get -q autoremove && apt-get -q clean && rm -rf /var/lib/apt/lists/* &&  rm -f /var/cache/apt/*.bin && \
   # Add user build to sudo

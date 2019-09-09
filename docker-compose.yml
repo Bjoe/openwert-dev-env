@@ -10,12 +10,12 @@ services:
       - USER_ID=${USER_ID}
     volumes:
       - ./bin:/home/build/openwrt/bin
-      - .:/development
+      - ./sdk:/home/build/sdk
       - ./build-openwrt:/build
       - ${SRC}:/source
     entrypoint:
       - bash 
-      - /development/set-environment.sh
+      - /home/build/sdk/env.sh
 
   openwrt-sdk-ide:
     build:
@@ -38,12 +38,14 @@ services:
       - DISPLAY=${DISPLAY}
     volumes:
       - /dev/bus/usb:/dev/bus/usb
-      - .:/development
+      - ./bin:/home/build/openwrt/bin
+      - ./config:/home/build/.config
+      - ./sdk:/home/build/sdk
       - $HOME:/home/$USER
       - /tmp:/tmp
     entrypoint:
       - bash 
-      - /development/set-environment.sh
+      - /home/build/sdk/env.sh
 
   openwrt-rootfs:
     image: openwrtorg/rootfs:${ROOTFSTAG}
