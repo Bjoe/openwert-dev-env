@@ -49,6 +49,14 @@ services:
 
   openwrt-rootfs:
     image: openwrtorg/rootfs:${ROOTFSTAG}
+    ports:
+      - "22:22"
+    networks:
+      - mynet
 
   openwrt-image-build:
     image: openwrtorg/imagebuilder:${IMAGETAG}
+
+networks:
+    mynet:
+        driver: bridge

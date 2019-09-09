@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProfiles>
-<!-- Written by QtCreator 4.10.0, 2019-09-09T03:05:57. -->
+<!-- Written by QtCreator 4.10.0, 2019-09-09T03:29:48. -->
 <qtcreator>
  <data>
   <variable>Kit.IrrelevantAspects</variable>
@@ -27,7 +27,7 @@
     </valuemap>
     <value type="QString" key="CMakeProjectManager.CMakeKitInformation">{9a4ea4bc-ae7e-4a8c-a1fd-57365ba1836a}</value>
     <value type="QString" key="Debugger.Information">{72dc20b9-2967-4e3d-9254-63b929723a0f}</value>
-    <value type="QString" key="PE.Profile.Device"></value>
+    <value type="QString" key="PE.Profile.Device">{db5d9aa6-9ceb-410a-b3fa-28981b07d2ef}</value>
     <value type="QString" key="PE.Profile.DeviceType">GenericLinuxOsType</value>
     <valuemap type="QVariantMap" key="PE.Profile.ToolChainsV3">
      <value type="QByteArray" key="C">{41d012be-e7b8-451f-8bce-36ab917ba86b}</value>
