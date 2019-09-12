@@ -1,3 +1,3 @@
 #!/bin/bash
 
-./run.sh $@ openwrt-sdk-ide
+./scripts/run.sh $@ openwrt-sdk-ide
