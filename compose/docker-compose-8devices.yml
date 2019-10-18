@@ -1,0 +1,41 @@
+version: "3.6"
+
+services:
+  openwrt-8devices-sdk:
+    build:
+      context: .
+      dockerfile: Dockerfile-8devices
+      args:
+        downloadimage: http://pkg.8devices.com/carambola2/v2.10/OpenWrt-8devices-SDK-v2.10-ar71xx-generic_gcc-5.3.0_musl-1.1.14.Linux-x86_64.tar.bz2
+
+  openwrt-8devices-sdk-ide:
+    build:
+      context: .
+      dockerfile: Docker-ide-debian
+      args:
+        dockerimage: compose_openwrt-8devices-sdk:latest
+    network_mode: "host"
+    privileged: true
+    security_opt:
+      - seccomp=unconfined
+    cap_add:
+      - SYS_PTRACE
+    devices:
+      - /dev/dri:/dev/dri
+    environment:
+      - GROUP_ID=${GROUP_ID}
+      - USER_ID=${USER_ID}
+      - SSH_AUTH_SOCK=${SSH_AUTH_SOCK}
+      - DISPLAY=${DISPLAY}
+    volumes:
+      - /dev/bus/usb:/dev/bus/usb
+      - ../bin:/home/build/openwrt/bin
+      - ../config:/home/build/.config
+      - ../sdk:/home/build/sdk
+      - $HOME:/home/$USER
+      - /tmp:/tmp
+    entrypoint:
+      - bash 
+      - /home/build/sdk/env.sh 
+      - tmux-startup.sh
+      - openwrt-8devices-sdk-ide
