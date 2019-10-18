@@ -31,18 +31,60 @@ services:
       - bash 
       - /home/build/sdk/env.sh 
       - tmux-startup.sh
-      
+      - openwrt-sdk-ide
+
+  openwrt-sdk-ide-ar71xx:
+    build:
+      context: .
+      dockerfile: Docker-ide-debian
+      args:
+        dockerimage: openwrtorg/sdk:ar71xx-generic-18.06.4
+    network_mode: "host"
+    privileged: true
+    security_opt:
+      - seccomp=unconfined
+    cap_add:
+      - SYS_PTRACE
+    devices:
+      - /dev/dri:/dev/dri
+    environment:
+      - GROUP_ID=${GROUP_ID}
+      - USER_ID=${USER_ID}
+      - SSH_AUTH_SOCK=${SSH_AUTH_SOCK}
+      - DISPLAY=${DISPLAY}
+    volumes:
+      - /dev/bus/usb:/dev/bus/usb
+      - ../bin:/home/build/openwrt/bin
+      - ../config:/home/build/.config
+      - ../sdk:/home/build/sdk
+      - $HOME:/home/$USER
+      - /tmp:/tmp
+    entrypoint:
+      - bash 
+      - /home/build/sdk/env.sh 
+      - tmux-startup.sh
+      - openwrt-sdk-ide-ar71xx
 
   openwrt-rootfs:
+    #build:
+      #context: .
+      #dockerfile: Dockerfile-rootfs
+      #args:
+        #dockerimage: openwrtorg/rootfs:${ROOTFSTAG}
     image: openwrtorg/rootfs:${ROOTFSTAG}
-    ports:
-      - "22:22"
-    networks:
-      - mynet
+    security_opt:
+      - seccomp=unconfined
+    cap_add:
+      - SYS_PTRACE
+    #network_mode: "host"
+    #ports:
+      #- "22:22"
+    #networks:
+      #- mynet
 
   openwrt-image-build:
     image: openwrtorg/imagebuilder:${IMAGETAG}
 
-networks:
-    mynet:
-        driver: bridge
+#networks:
+    #mynet:
+        #driver: bridge

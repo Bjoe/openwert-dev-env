@@ -1,0 +1,13 @@
+ARG dockerimage
+
+FROM $dockerimage
+
+#CMD ["/bin/bash"]
+
+RUN opkg update && opkg install \
+    gdb \
+    gdbserver 
+    #\
+    #openssh-sftpserver
+
+CMD ["/sbin/init"]
