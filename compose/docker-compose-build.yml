@@ -15,5 +15,5 @@ services:
       - ${SRC}:/source
     entrypoint:
       - bash 
-      - /home/build/sdk/env.sh
-      - bash-startup.sh
+      - /home/build/sdk/set-user-env.sh
+      - set-toolchain-generic-env.sh build-startup.sh

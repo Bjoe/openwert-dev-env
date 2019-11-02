@@ -12,19 +12,13 @@ if [ ! -f .config ]; then
   exit 1;
 fi
 
-cat .config | sed -s 's/-/_/g' > .config.env
-
-source .config.env
-
-GCCV=7.4.0 # TODO
-ARCH=$CONFIG_ARCH  # subst i486,i386, subst i586,i386, subst i686,i386
-#ARCH_SUFFIX=_$CONFIG_CPU_TYPE TODO
-ARCH_SUFFIX=""
-BOARD=$CONFIG_TARGET_BOARD
-LIBC=$CONFIG_LIBC
+GCCV="5.3.0"
+ARCH="mips"
+ARCH_SUFFIX="_34kc"
+BOARD="ar71xx"
+LIBC="musl-1.1.14"
 
 DIR_SUFFIX=$LIBC
-
 TARGET_DIR_NAME=target-${ARCH}${ARCH_SUFFIX}_${DIR_SUFFIX}
 TOOLCHAIN_DIR_NAME=toolchain-${ARCH}${ARCH_SUFFIX}_gcc-${GCCV}_${DIR_SUFFIX}
 
@@ -35,3 +29,5 @@ export STAGING_DIR_HOST=$OPENWRT_SDK/staging_dir/host
 export STAGING_DIR_HOSTPKG=$OPENWRT_SDK/staging_dir/hostpkg
 export PATH=$TOOLCHAIN_DIR/bin:$STAGING_DIR_HOST/bin:$STAGING_DIR_HOSTPKG/bin:$PATH        
 export CROSS_COMPILE_TOOLCHAIN_PREFIX=$ARCH-openwrt-linux-$LIBC
+
+/home/build/sdk/$@

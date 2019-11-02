@@ -1,5 +1,3 @@
 #!/bin/bash
 
-. /home/build/sdk/startup.sh
-
-tmux -L $1 new-session -n openwrt-sdk /bin/bash
+tmux -L $1 new-session -n $1 /bin/bash

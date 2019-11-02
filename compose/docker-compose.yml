@@ -29,9 +29,8 @@ services:
       - /tmp:/tmp
     entrypoint:
       - bash 
-      - /home/build/sdk/env.sh 
-      - tmux-startup.sh
-      - openwrt-sdk-ide
+      - /home/build/sdk/set-user-env.sh
+      - set-toolchain-generic-env.sh tmux-startup.sh openwrt-sdk-ide
 
   openwrt-sdk-ide-ar71xx:
     build:
@@ -61,9 +60,8 @@ services:
       - /tmp:/tmp
     entrypoint:
       - bash 
-      - /home/build/sdk/env.sh 
-      - tmux-startup.sh
-      - openwrt-sdk-ide-ar71xx
+      - /home/build/sdk/set-user-env.sh
+      - set-toolchain-generic-env.sh tmux-startup.sh openwrt-sdk-ide-ar71xx
 
   openwrt-rootfs:
     #build:
