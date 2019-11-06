@@ -2,6 +2,7 @@ version: "3.6"
 
 services:
   openwrt-8devices-sdk:
+    image: openwrt-8devices-sdk:latest
     build:
       context: .
       dockerfile: Dockerfile-8devices
@@ -9,7 +10,7 @@ services:
         downloadimage: http://pkg.8devices.com/carambola2/v2.10/OpenWrt-8devices-SDK-v2.10-ar71xx-generic_gcc-5.3.0_musl-1.1.14.Linux-x86_64.tar.bz2
 
   openwrt-8devices-sdk-build:
-    image: compose_openwrt-8devices-sdk:latest
+    image: openwrt-8devices-sdk:latest
     user: 0:0
     environment:
       - GROUP_ID=${GROUP_ID}
@@ -26,6 +27,8 @@ services:
       - bash 
       - /home/build/sdk/set-user-env.sh 
       - set-toolchain-mips_34kc_gcc-5.3.0_musl-1.1.14-8devices-env.sh build-startup.sh
+    depends_on:
+      - openwrt-8devices-sdk
   
   openwrt-8devices-sdk-ide:
     build:
@@ -57,3 +60,5 @@ services:
       - bash 
       - /home/build/sdk/set-user-env.sh 
       - set-toolchain-mips_34kc_gcc-5.3.0_musl-1.1.14-8devices-env.sh tmux-startup.sh openwrt-8devices-sdk-ide
+    depends_on:
+      - openwrt-8devices-sdk
