@@ -35,7 +35,7 @@ services:
       context: .
       dockerfile: Docker-ide-debian
       args:
-        dockerimage: compose_openwrt-8devices-sdk:latest
+        dockerimage: openwrt-8devices-sdk:latest
     network_mode: "host"
     privileged: true
     security_opt:
