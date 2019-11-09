@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: Docker-ide-debian
       args:
-        dockerimage: openwrtorg/sdk:${SDKTAG}
+        dockerimage: openwrtorg/sdk:latest
     network_mode: "host"
     privileged: true
     security_opt:
@@ -33,6 +33,7 @@ services:
       - set-toolchain-generic-env.sh tmux-startup.sh openwrt-sdk-ide
 
   openwrt-sdk-ide-ar71xx:
+    image: openwrt-sdk-ide:ar71xx-generic-18.06.4
     build:
       context: .
       dockerfile: Docker-ide-debian
@@ -61,7 +62,7 @@ services:
     entrypoint:
       - bash 
       - /home/build/sdk/set-user-env.sh
-      - set-toolchain-generic-env.sh tmux-startup.sh openwrt-sdk-ide-ar71xx
+      - set-toolchain-mips_24kc_gcc-7.3.0_musl-ar71xx-generic-env.sh tmux-startup.sh openwrt-sdk-ide-ar71xx
 
   openwrt-rootfs:
     #build:
