@@ -66,13 +66,79 @@ services:
       - /home/build/sdk/set-user-env.sh
       - set-toolchain-mips_24kc_gcc-7.3.0_musl-ar71xx-generic-env.sh tmux-startup.sh openwrt-sdk-ide-ar71xx
 
+  openwrt-sdk-ide-i386-stable:
+    image: openwrt-sdk-ide:x86-generic-18.06.4
+    build:
+      context: .
+      dockerfile: Docker-ide-debian
+      args:
+        dockerimage: openwrtorg/sdk:x86-generic-18.06.4
+    container_name: openwrt-sdk-ide-i386-stable-dev
+    network_mode: "host"
+    privileged: true
+    security_opt:
+      - seccomp=unconfined
+    cap_add:
+      - SYS_PTRACE
+    devices:
+      - /dev/dri:/dev/dri
+    environment:
+      - GROUP_ID=${GROUP_ID}
+      - USER_ID=${USER_ID}
+      - SSH_AUTH_SOCK=${SSH_AUTH_SOCK}
+      - DISPLAY=${DISPLAY}
+    volumes:
+      - /dev/bus/usb:/dev/bus/usb
+      - ../bin:/home/build/openwrt/bin
+      - ../config:/home/build/.config
+      - ../sdk:/home/build/sdk
+      - $HOME:/home/$USER
+      - /tmp:/tmp
+    entrypoint:
+      - bash 
+      - /home/build/sdk/set-user-env.sh
+      - set-toolchain-i386_gcc-7.3.0_musl-pentium4-generic-env.sh tmux-startup.sh openwrt-sdk-ide-i386-stable
+
+  openwrt-sdk-ide-i386-snapshot:
+    image: openwrt-sdk-ide:x86-generic-19.07-SNAPSHOT
+    build:
+      context: .
+      dockerfile: Docker-ide-debian
+      args:
+        dockerimage: openwrtorg/sdk:x86-generic-19.07-SNAPSHOT
+    container_name: openwrt-sdk-ide-i386-snapshot-dev
+    network_mode: "host"
+    privileged: true
+    security_opt:
+      - seccomp=unconfined
+    cap_add:
+      - SYS_PTRACE
+    devices:
+      - /dev/dri:/dev/dri
+    environment:
+      - GROUP_ID=${GROUP_ID}
+      - USER_ID=${USER_ID}
+      - SSH_AUTH_SOCK=${SSH_AUTH_SOCK}
+      - DISPLAY=${DISPLAY}
+    volumes:
+      - /dev/bus/usb:/dev/bus/usb
+      - ../bin:/home/build/openwrt/bin
+      - ../config:/home/build/.config
+      - ../sdk:/home/build/sdk
+      - $HOME:/home/$USER
+      - /tmp:/tmp
+    entrypoint:
+      - bash 
+      - /home/build/sdk/set-user-env.sh
+      - set-toolchain-i386_gcc-7.4.0_musl-pentium4-generic-env.sh tmux-startup.sh openwrt-sdk-ide-i386-snapshot
+
   openwrt-rootfs:
     #build:
       #context: .
       #dockerfile: Dockerfile-rootfs
       #args:
         #dockerimage: openwrtorg/rootfs:${ROOTFSTAG}
-    image: openwrtorg/rootfs:${ROOTFSTAG}
+    image: openwrtorg/rootfs:19.07-SNAPSHOT
     security_opt:
       - seccomp=unconfined
     cap_add:
@@ -83,8 +149,24 @@ services:
     #networks:
       #- mynet
 
-  openwrt-image-build:
-    image: openwrtorg/imagebuilder:${IMAGETAG}
+  openwrt-image-build-ar71xx:
+    image: openwrtorg/imagebuilder:ar71xx-generic-18.06.4
+    network_mode: "host"
+    user: 0:0
+    environment:
+      - GROUP_ID=${GROUP_ID}
+      - USER_ID=${USER_ID}
+      - SSH_AUTH_SOCK=${SSH_AUTH_SOCK}
+      - DISPLAY=${DISPLAY}
+    volumes:
+      - ../bin:/home/build/openwrt/bin
+      - ../sdk:/home/build/sdk
+      - $HOME:/home/$USER
+      - /tmp:/tmp
+    entrypoint:
+      - bash
+      - /home/build/sdk/set-user-env.sh
+      - build-startup.sh
 
 #networks:
     #mynet:
