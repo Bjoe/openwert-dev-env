@@ -132,6 +132,39 @@ services:
       - /home/build/sdk/set-user-env.sh
       - set-toolchain-i386_gcc-7.4.0_musl-pentium4-generic-env.sh tmux-startup.sh openwrt-sdk-ide-i386-snapshot
 
+  openwrt-sdk-ide-x86-64-snapshot:
+    image: openwrtorg/sdk:x86-64-19.07-SNAPSHOT
+    build:
+      context: .
+      dockerfile: Docker-ide-debian
+      args:
+        dockerimage: openwrtorg/sdk:x86-64-19.07-SNAPSHOT
+    container_name: openwrt-sdk-ide-x86-64-snapshot-dev
+    network_mode: "host"
+    privileged: true
+    security_opt:
+      - seccomp=unconfined
+    cap_add:
+      - SYS_PTRACE
+    devices:
+      - /dev/dri:/dev/dri
+    environment:
+      - GROUP_ID=${GROUP_ID}
+      - USER_ID=${USER_ID}
+      - SSH_AUTH_SOCK=${SSH_AUTH_SOCK}
+      - DISPLAY=${DISPLAY}
+    volumes:
+      - /dev/bus/usb:/dev/bus/usb
+      - ../bin:/home/build/openwrt/bin
+      - ../config:/home/build/.config
+      - ../sdk:/home/build/sdk
+      - $HOME:/home/$USER
+      - /tmp:/tmp
+    entrypoint:
+      - bash 
+      - /home/build/sdk/set-user-env.sh
+      - set-toolchain-x86-64_gcc-7.4.0_musl-generic-env.sh tmux-startup.sh openwrt-sdk-ide-i386-snapshot
+
   openwrt-rootfs:
     #build:
       #context: .
