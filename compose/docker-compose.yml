@@ -163,7 +163,7 @@ services:
     entrypoint:
       - bash 
       - /home/build/sdk/set-user-env.sh
-      - set-toolchain-x86-64_gcc-7.4.0_musl-generic-env.sh tmux-startup.sh openwrt-sdk-ide-i386-snapshot
+      - set-toolchain-x86-64_gcc-7.4.0_musl-generic-env.sh tmux-startup.sh openwrt-sdk-ide-x86-64-snapshot
 
   openwrt-rootfs:
     #build:
@@ -198,6 +198,36 @@ services:
       - /tmp:/tmp
     entrypoint:
       - bash
+      - /home/build/sdk/set-user-env.sh
+      - build-startup.sh
+
+  openwrt-image-build:
+    image: openwrt-image-build
+    build:
+      context: .
+      dockerfile: Dockerfile-openwrt
+    container_name: openwrt-image-build-dev
+    network_mode: "host"
+    user: 0:0
+    privileged: true
+    security_opt:
+      - seccomp=unconfined
+    cap_add:
+      - SYS_PTRACE
+    devices:
+      - /dev/dri:/dev/dri
+    environment:
+      - GROUP_ID=${GROUP_ID}
+      - USER_ID=${USER_ID}
+      - SSH_AUTH_SOCK=${SSH_AUTH_SOCK}
+      - DISPLAY=${DISPLAY}
+    volumes:
+      - /dev/bus/usb:/dev/bus/usb
+      - $HOME:/home/$USER
+      - ../sdk:/home/build/sdk
+      - /tmp:/tmp
+    entrypoint:
+      - bash 
       - /home/build/sdk/set-user-env.sh
       - build-startup.sh
 
