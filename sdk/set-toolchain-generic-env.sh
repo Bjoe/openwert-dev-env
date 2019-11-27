@@ -4,7 +4,13 @@ OPENWRT_SDK=/home/build/openwrt
 
 cd $OPENWRT_SDK
 
+if [ -e /home/build/sdk/feeds.conf ]; then
+    cp /home/build/sdk/feeds.conf .
+    cat feeds.conf.default >> feeds.conf
+fi
+
 ./scripts/feeds update -a
+./scripts/feeds install -a
 make menuconfig
 
 if [ ! -f .config ]; then
@@ -35,5 +41,6 @@ export STAGING_DIR_HOST=$OPENWRT_SDK/staging_dir/host
 export STAGING_DIR_HOSTPKG=$OPENWRT_SDK/staging_dir/hostpkg
 export PATH=$TOOLCHAIN_DIR/bin:$STAGING_DIR_HOST/bin:$STAGING_DIR_HOSTPKG/bin:$PATH        
 export CROSS_COMPILE_TOOLCHAIN_PREFIX=$ARCH-openwrt-linux-$LIBC
+export PKG_CONFIG_PATH=$STAGING_DIR/usr/lib/pkgconfig
 
 /home/build/sdk/$@
