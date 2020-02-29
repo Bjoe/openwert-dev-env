@@ -1,5 +1,6 @@
 #!/bin/bash
 
-USER_ID=$(id -u ${USER}) \
-GROUP_ID=$(id -g ${USER}) \
-docker-compose -f compose/docker-compose-8devices.yml run $@ openwrt-8devices-sdk-build
+export DOCKER_IMAGE=openwrt-8devices-sdk-build
+export DOCKER_CONTAINER=compose_openwrt-8devices-sdk-build_run_1
+export DOCKER_COMPOSE_FILE=docker-compose-8devices.yml
+./scripts/run.sh $@

@@ -5,6 +5,7 @@ if [ -z "$SRC" ];then
     exit 1;
 fi
 
-USER_ID=$(id -u ${USER}) \
-GROUP_ID=$(id -g ${USER}) \
-docker-compose -f compose/docker-compose-build.yml run $@ openwrt-sdk
+export DOCKER_IMAGE=openwrt-sdk
+export DOCKER_CONTAINER=compose_openwrt-sdk_run_1
+export DOCKER_COMPOSE_FILE=docker-compose-build.yml
+./scripts/run.sh $@
