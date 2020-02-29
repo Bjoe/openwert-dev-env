@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorDevices>
-<!-- Written by QtCreator 4.10.0, 2019-09-10T10:18:03. -->
+<!-- Written by QtCreator 4.11.0, 2020-01-02T06:06:35. -->
 <qtcreator>
  <data>
   <variable>DeviceManager</variable>
@@ -22,6 +22,7 @@
      <value type="QString" key="Name">Local PC</value>
      <value type="int" key="Origin">1</value>
      <value type="QString" key="OsType">Desktop</value>
+     <value type="QString" key="PeripheralDescriptionFileKey"></value>
      <value type="QString" key="QmlsceneKey"></value>
      <value type="int" key="SshPort">0</value>
      <value type="int" key="Timeout">0</value>
@@ -36,13 +37,14 @@
       <value type="bool" key="RemoteLinux.SupportsRSync">false</value>
      </valuemap>
      <value type="QString" key="FreePortsSpec">10000-10100</value>
-     <value type="QString" key="Host">172.21.0.2</value>
+     <value type="QString" key="Host">192.168.200.2</value>
      <value type="int" key="HostKeyChecking">2</value>
      <value type="QString" key="InternalId">{db5d9aa6-9ceb-410a-b3fa-28981b07d2ef}</value>
      <value type="QString" key="KeyFile">/home/build/.ssh/qtc_id</value>
      <value type="QString" key="Name">OpenWRT rootfs</value>
      <value type="int" key="Origin">0</value>
      <value type="QString" key="OsType">GenericLinuxOsType</value>
+     <value type="QString" key="PeripheralDescriptionFileKey"></value>
      <value type="QString" key="QmlsceneKey"></value>
      <value type="int" key="SshPort">22</value>
      <value type="int" key="Timeout">10</value>

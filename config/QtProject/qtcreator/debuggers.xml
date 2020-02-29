@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorDebuggers>
-<!-- Written by QtCreator 4.10.0, 2019-09-10T10:18:03. -->
+<!-- Written by QtCreator 4.11.0, 2020-01-02T06:06:35. -->
 <qtcreator>
  <data>
   <variable>DebuggerItem.0</variable>
@@ -22,21 +22,69 @@
   <variable>DebuggerItem.1</variable>
   <valuemap type="QVariantMap">
    <valuelist type="QVariantList" key="Abis">
-    <value type="QString">x86-linux-generic-elf-64bit</value>
+    <value type="QString">mips-linux-generic-elf-32bit</value>
    </valuelist>
    <value type="bool" key="AutoDetected">false</value>
-   <value type="QString" key="Binary">/home/build/openwrt/staging_dir/toolchain-x86_64_gcc-7.4.0_musl/bin/x86_64-openwrt-linux-musl-gdb</value>
-   <value type="QString" key="DisplayName">OpenWRT GDB</value>
+   <value type="QString" key="Binary">/home/build/openwrt/staging_dir/toolchain-mips_24kc_gcc-7.3.0_musl/bin/mips-openwrt-linux-gdb</value>
+   <value type="QString" key="DisplayName">OpenWRT mips 7.3.0 ar71xx GDB</value>
    <value type="int" key="EngineType">1</value>
    <value type="QString" key="Id">{72dc20b9-2967-4e3d-9254-63b929723a0f}</value>
    <value type="QDateTime" key="LastModified"></value>
-   <value type="QString" key="Version">8.2.1</value>
+   <value type="QString" key="Version">8.0.1</value>
+   <value type="QString" key="WorkingDirectory"></value>
+  </valuemap>
+ </data>
+ <data>
+  <variable>DebuggerItem.2</variable>
+  <valuemap type="QVariantMap">
+   <valuelist type="QVariantList" key="Abis">
+    <value type="QString">x86-linux-generic-elf-32bit</value>
+   </valuelist>
+   <value type="bool" key="AutoDetected">false</value>
+   <value type="QString" key="Binary">/home/build/openwrt/staging_dir/toolchain-i386_pentium4_gcc-7.3.0_musl/bin/i486-openwrt-linux-gdb</value>
+   <value type="QString" key="DisplayName">OpenWRT x86 7.3.0 pentium4 GDB</value>
+   <value type="int" key="EngineType">1</value>
+   <value type="QString" key="Id">{ed14f741-6c6a-4e81-b558-da409e3e7cc0}</value>
+   <value type="QDateTime" key="LastModified"></value>
+   <value type="QString" key="Version">8.0.1</value>
+   <value type="QString" key="WorkingDirectory"></value>
+  </valuemap>
+ </data>
+ <data>
+  <variable>DebuggerItem.3</variable>
+  <valuemap type="QVariantMap">
+   <valuelist type="QVariantList" key="Abis">
+    <value type="QString">x86-linux-generic-elf-32bit</value>
+   </valuelist>
+   <value type="bool" key="AutoDetected">false</value>
+   <value type="QString" key="Binary">/home/build/openwrt/staging_dir/toolchain-i386_pentium4_gcc-7.4.0_musl/bin/i486-openwrt-linux-gdb</value>
+   <value type="QString" key="DisplayName">OpenWRT x86 32bit 7.4.0 pentium4</value>
+   <value type="int" key="EngineType">1</value>
+   <value type="QString" key="Id">{87a1affb-ad10-47fe-8ebe-fda219a61a4d}</value>
+   <value type="QDateTime" key="LastModified"></value>
+   <value type="QString" key="Version">8.3.1</value>
+   <value type="QString" key="WorkingDirectory"></value>
+  </valuemap>
+ </data>
+ <data>
+  <variable>DebuggerItem.4</variable>
+  <valuemap type="QVariantMap">
+   <valuelist type="QVariantList" key="Abis">
+    <value type="QString">x86-linux-generic-elf-64bit</value>
+   </valuelist>
+   <value type="bool" key="AutoDetected">false</value>
+   <value type="QString" key="Binary">/home/build/openwrt/staging_dir/toolchain-x86_64_gcc-7.4.0_musl/bin/x86_64-openwrt-linux-gdb</value>
+   <value type="QString" key="DisplayName">OpenWRT x86 64bit 7.4.0</value>
+   <value type="int" key="EngineType">1</value>
+   <value type="QString" key="Id">{887c6315-0f97-4a24-ba12-d3edf8817731}</value>
+   <value type="QDateTime" key="LastModified"></value>
+   <value type="QString" key="Version">8.3.1</value>
    <value type="QString" key="WorkingDirectory"></value>
   </valuemap>
  </data>
  <data>
   <variable>DebuggerItem.Count</variable>
-  <value type="int">2</value>
+  <value type="int">5</value>
  </data>
  <data>
   <variable>Version</variable>

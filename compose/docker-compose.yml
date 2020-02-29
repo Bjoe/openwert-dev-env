@@ -234,3 +234,11 @@ services:
 #networks:
     #mynet:
         #driver: bridge
+
+#networks:
+  #default:
+    #driver: bridge
+    #ipam:
+      #driver: default
+      #config:
+      #- subnet:  10.103.0.1/16
