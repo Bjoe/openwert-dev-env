@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorDebuggers>
-<!-- Written by QtCreator 4.11.0, 2020-01-02T06:06:35. -->
+<!-- Written by QtCreator 4.11.2, 2020-04-14T15:04:47. -->
 <qtcreator>
  <data>
   <variable>DebuggerItem.0</variable>
@@ -13,7 +13,7 @@
    <value type="QString" key="DisplayName">System GDB at /usr/bin/gdb</value>
    <value type="int" key="EngineType">1</value>
    <value type="QString" key="Id">{7aa45a62-f81c-4fc4-abbe-3f966a8d01e0}</value>
-   <value type="QDateTime" key="LastModified">2019-08-28T15:18:24.000</value>
+   <value type="QDateTime" key="LastModified">2019-10-14T14:54:03.000</value>
    <value type="QString" key="Version">8.2.1</value>
    <value type="QString" key="WorkingDirectory"></value>
   </valuemap>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProfiles>
-<!-- Written by QtCreator 4.11.0, 2020-01-02T06:06:35. -->
+<!-- Written by QtCreator 4.11.2, 2020-04-14T15:04:47. -->
 <qtcreator>
  <data>
   <variable>Kit.IrrelevantAspects</variable>
@@ -76,6 +76,50 @@
    <value type="QString" key="PE.Profile.Name">OpenWRT mips 32bit (ar71xx)</value>
    <value type="bool" key="PE.Profile.SDK">false</value>
    <valuelist type="QVariantList" key="PE.Profile.StickyInfo"/>
+  </valuemap>
+ </data>
+ <data>
+  <variable>Profile.10</variable>
+  <valuemap type="QVariantMap">
+   <value type="bool" key="PE.Profile.AutoDetected">true</value>
+   <value type="QString" key="PE.Profile.AutoDetectionSource"></value>
+   <valuemap type="QVariantMap" key="PE.Profile.Data">
+    <valuelist type="QVariantList" key="CMake.ConfigurationKitInformation">
+     <value type="QString">QT_QMAKE_EXECUTABLE:STRING=%{Qt:qmakeExecutable}</value>
+     <value type="QString">CMAKE_PREFIX_PATH:STRING=%{Qt:QT_INSTALL_PREFIX}</value>
+     <value type="QString">CMAKE_C_COMPILER:STRING=%{Compiler:Executable:C}</value>
+     <value type="QString">CMAKE_CXX_COMPILER:STRING=%{Compiler:Executable:Cxx}</value>
+    </valuelist>
+    <valuemap type="QVariantMap" key="CMake.GeneratorKitInformation">
+     <value type="QString" key="ExtraGenerator">CodeBlocks</value>
+     <value type="QString" key="Generator">Unix Makefiles</value>
+     <value type="QString" key="Platform"></value>
+     <value type="QString" key="Toolset"></value>
+    </valuemap>
+    <value type="QString" key="CMakeProjectManager.CMakeKitInformation">{1eea85c6-2861-425e-ad10-561cb4b2db65}</value>
+    <value type="QString" key="Debugger.Information">{7aa45a62-f81c-4fc4-abbe-3f966a8d01e0}</value>
+    <value type="QString" key="PE.Profile.Device">Desktop Device</value>
+    <value type="QString" key="PE.Profile.DeviceType">Desktop</value>
+    <valuemap type="QVariantMap" key="PE.Profile.ToolChains">
+     <value type="QString" key="C">x86-linux-generic-elf-64bit</value>
+     <value type="QString" key="Cxx">x86-linux-generic-elf-64bit</value>
+    </valuemap>
+    <valuemap type="QVariantMap" key="PE.Profile.ToolChainsV3">
+     <value type="QByteArray" key="C">{040a20c4-98d6-4bb4-b6c0-cd77d6c2f903}</value>
+     <value type="QByteArray" key="Cxx">{57008a9f-0a5c-41af-ad89-c3f784370d39}</value>
+    </valuemap>
+    <value type="QString" key="QtSupport.QtInformation">SDK.qt.qt5.5125.gcc_64</value>
+   </valuemap>
+   <value type="QString" key="PE.Profile.DeviceTypeForIcon"></value>
+   <value type="QString" key="PE.Profile.Icon"></value>
+   <value type="QString" key="PE.Profile.Id">qt.qt5.5125.gcc_64_kit</value>
+   <valuelist type="QVariantList" key="PE.Profile.MutableInfo"/>
+   <value type="QString" key="PE.Profile.Name">Desktop Qt %{Qt:Version} GCC 64bit</value>
+   <value type="bool" key="PE.Profile.SDK">true</value>
+   <valuelist type="QVariantList" key="PE.Profile.StickyInfo">
+    <value type="QString">QtSupport.QtInformation</value>
+    <value type="QString">PE.Profile.DeviceType</value>
+   </valuelist>
   </valuemap>
  </data>
  <data>
@@ -158,7 +202,7 @@
    <valuemap type="QVariantMap" key="PE.Profile.Data">
     <value type="QString" key="Android.GdbServer.Information"></value>
     <valuelist type="QVariantList" key="CMake.ConfigurationKitInformation">
-     <value type="QString">CMAKE_TOOLCHAIN_FILE:INTERNAL=/home/jboehme/Development/openwrt-sdk/sdk/openwrt.toolchain.cmake</value>
+     <value type="QString">CMAKE_TOOLCHAIN_FILE:INTERNAL=/home/build/sdk/openwrt.toolchain.cmake</value>
     </valuelist>
     <valuemap type="QVariantMap" key="CMake.GeneratorKitInformation">
      <value type="QString" key="ExtraGenerator">CodeBlocks</value>
@@ -170,7 +214,7 @@
     <value type="QString" key="Debugger.Information">{7aa45a62-f81c-4fc4-abbe-3f966a8d01e0}</value>
     <value type="QString" key="PE.Profile.Device">{db5d9aa6-9ceb-410a-b3fa-28981b07d2ef}</value>
     <value type="QString" key="PE.Profile.DeviceType">GenericLinuxOsType</value>
-    <value type="QString" key="PE.Profile.SysRoot">/home/build/openwrt/staging_dir/target-x86_64_musl</value>
+    <value type="QString" key="PE.Profile.SysRoot">/home/build/openwrt/staging_dir/toolchain-x86_64_gcc-7.3.0_musl</value>
     <valuemap type="QVariantMap" key="PE.Profile.ToolChainsV3">
      <value type="QByteArray" key="C">{5a6ba0e0-df30-4a7c-ad3f-e1b13f1e6599}</value>
      <value type="QByteArray" key="Cxx">{3b182d8c-3b24-4006-bd63-25cacbdb989a}</value>
@@ -225,8 +269,8 @@
    <value type="QString" key="PE.Profile.Name">Desktop Qt %{Qt:Version} GCC 64bit</value>
    <value type="bool" key="PE.Profile.SDK">true</value>
    <valuelist type="QVariantList" key="PE.Profile.StickyInfo">
-    <value type="QString">PE.Profile.DeviceType</value>
     <value type="QString">QtSupport.QtInformation</value>
+    <value type="QString">PE.Profile.DeviceType</value>
    </valuelist>
   </valuemap>
  </data>
@@ -260,17 +304,17 @@
      <value type="QByteArray" key="C">{040a20c4-98d6-4bb4-b6c0-cd77d6c2f903}</value>
      <value type="QByteArray" key="Cxx">{57008a9f-0a5c-41af-ad89-c3f784370d39}</value>
     </valuemap>
-    <value type="QString" key="QtSupport.QtInformation">SDK.qt.qt5.5140.gcc_64</value>
+    <value type="QString" key="QtSupport.QtInformation">SDK.qt.qt5.5141.gcc_64</value>
    </valuemap>
    <value type="QString" key="PE.Profile.DeviceTypeForIcon"></value>
    <value type="QString" key="PE.Profile.Icon"></value>
-   <value type="QString" key="PE.Profile.Id">qt.qt5.5140.gcc_64_kit</value>
+   <value type="QString" key="PE.Profile.Id">qt.qt5.5141.gcc_64_kit</value>
    <valuelist type="QVariantList" key="PE.Profile.MutableInfo"/>
    <value type="QString" key="PE.Profile.Name">Desktop Qt %{Qt:Version} GCC 64bit</value>
    <value type="bool" key="PE.Profile.SDK">true</value>
    <valuelist type="QVariantList" key="PE.Profile.StickyInfo">
-    <value type="QString">PE.Profile.DeviceType</value>
     <value type="QString">QtSupport.QtInformation</value>
+    <value type="QString">PE.Profile.DeviceType</value>
    </valuelist>
   </valuemap>
  </data>
@@ -304,23 +348,104 @@
      <value type="QByteArray" key="C"></value>
      <value type="QByteArray" key="Cxx"></value>
     </valuemap>
-    <value type="QString" key="QtSupport.QtInformation">SDK.qt.qt5.5140.wasm_32</value>
+    <value type="QString" key="QtSupport.QtInformation">SDK.qt.qt5.5141.wasm_32</value>
    </valuemap>
    <value type="QString" key="PE.Profile.DeviceTypeForIcon"></value>
    <value type="QString" key="PE.Profile.Icon"></value>
-   <value type="QString" key="PE.Profile.Id">qt.qt5.5140.wasm_32_kit</value>
+   <value type="QString" key="PE.Profile.Id">qt.qt5.5141.wasm_32_kit</value>
    <valuelist type="QVariantList" key="PE.Profile.MutableInfo"/>
    <value type="QString" key="PE.Profile.Name">Qt %{Qt:Version} WebAssembly</value>
    <value type="bool" key="PE.Profile.SDK">true</value>
    <valuelist type="QVariantList" key="PE.Profile.StickyInfo">
-    <value type="QString">PE.Profile.DeviceType</value>
     <value type="QString">QtSupport.QtInformation</value>
+    <value type="QString">PE.Profile.DeviceType</value>
+   </valuelist>
+  </valuemap>
+ </data>
+ <data>
+  <variable>Profile.8</variable>
+  <valuemap type="QVariantMap">
+   <value type="bool" key="PE.Profile.AutoDetected">true</value>
+   <value type="QString" key="PE.Profile.AutoDetectionSource"></value>
+   <valuemap type="QVariantMap" key="PE.Profile.Data">
+    <valuelist type="QVariantList" key="CMake.ConfigurationKitInformation">
+     <value type="QString">QT_QMAKE_EXECUTABLE:STRING=%{Qt:qmakeExecutable}</value>
+     <value type="QString">CMAKE_PREFIX_PATH:STRING=%{Qt:QT_INSTALL_PREFIX}</value>
+     <value type="QString">CMAKE_C_COMPILER:STRING=%{Compiler:Executable:C}</value>
+     <value type="QString">CMAKE_CXX_COMPILER:STRING=%{Compiler:Executable:Cxx}</value>
+    </valuelist>
+    <valuemap type="QVariantMap" key="CMake.GeneratorKitInformation">
+     <value type="QString" key="ExtraGenerator">CodeBlocks</value>
+     <value type="QString" key="Generator">Unix Makefiles</value>
+     <value type="QString" key="Platform"></value>
+     <value type="QString" key="Toolset"></value>
+    </valuemap>
+    <value type="QString" key="CMakeProjectManager.CMakeKitInformation">{1eea85c6-2861-425e-ad10-561cb4b2db65}</value>
+    <value type="QString" key="Debugger.Information">{7aa45a62-f81c-4fc4-abbe-3f966a8d01e0}</value>
+    <value type="QString" key="PE.Profile.Device">Desktop Device</value>
+    <value type="QString" key="PE.Profile.DeviceType">Desktop</value>
+    <valuemap type="QVariantMap" key="PE.Profile.ToolChains">
+     <value type="QString" key="C">x86-linux-generic-elf-64bit</value>
+     <value type="QString" key="Cxx">x86-linux-generic-elf-64bit</value>
+    </valuemap>
+    <valuemap type="QVariantMap" key="PE.Profile.ToolChainsV3">
+     <value type="QByteArray" key="C">{040a20c4-98d6-4bb4-b6c0-cd77d6c2f903}</value>
+     <value type="QByteArray" key="Cxx">{57008a9f-0a5c-41af-ad89-c3f784370d39}</value>
+    </valuemap>
+    <value type="QString" key="QtSupport.QtInformation">SDK.qt.qt5.5132.gcc_64</value>
+   </valuemap>
+   <value type="QString" key="PE.Profile.DeviceTypeForIcon"></value>
+   <value type="QString" key="PE.Profile.Icon"></value>
+   <value type="QString" key="PE.Profile.Id">qt.qt5.5132.gcc_64_kit</value>
+   <valuelist type="QVariantList" key="PE.Profile.MutableInfo"/>
+   <value type="QString" key="PE.Profile.Name">Desktop Qt %{Qt:Version} GCC 64bit</value>
+   <value type="bool" key="PE.Profile.SDK">true</value>
+   <valuelist type="QVariantList" key="PE.Profile.StickyInfo">
+    <value type="QString">QtSupport.QtInformation</value>
+    <value type="QString">PE.Profile.DeviceType</value>
+   </valuelist>
+  </valuemap>
+ </data>
+ <data>
+  <variable>Profile.9</variable>
+  <valuemap type="QVariantMap">
+   <value type="bool" key="PE.Profile.AutoDetected">true</value>
+   <value type="QString" key="PE.Profile.AutoDetectionSource"></value>
+   <valuemap type="QVariantMap" key="PE.Profile.Data">
+    <valuelist type="QVariantList" key="CMake.ConfigurationKitInformation">
+     <value type="QString">QT_QMAKE_EXECUTABLE:STRING=%{Qt:qmakeExecutable}</value>
+     <value type="QString">CMAKE_PREFIX_PATH:STRING=%{Qt:QT_INSTALL_PREFIX}</value>
+     <value type="QString">CMAKE_C_COMPILER:STRING=%{Compiler:Executable:C}</value>
+     <value type="QString">CMAKE_CXX_COMPILER:STRING=%{Compiler:Executable:Cxx}</value>
+    </valuelist>
+    <valuemap type="QVariantMap" key="CMake.GeneratorKitInformation">
+     <value type="QString" key="ExtraGenerator">CodeBlocks</value>
+     <value type="QString" key="Generator">Unix Makefiles</value>
+     <value type="QString" key="Platform"></value>
+     <value type="QString" key="Toolset"></value>
+    </valuemap>
+    <value type="QString" key="CMakeProjectManager.CMakeKitInformation">{1eea85c6-2861-425e-ad10-561cb4b2db65}</value>
+    <value type="QString" key="Debugger.Information">{7aa45a62-f81c-4fc4-abbe-3f966a8d01e0}</value>
+    <value type="QString" key="PE.Profile.Device">Desktop Device</value>
+    <value type="QString" key="PE.Profile.DeviceType">Desktop</value>
+    <valuemap type="QVariantMap" key="PE.Profile.ToolChainsV3"/>
+    <value type="QString" key="QtSupport.QtInformation">SDK.qt.qt5.5132.wasm_32</value>
+   </valuemap>
+   <value type="QString" key="PE.Profile.DeviceTypeForIcon"></value>
+   <value type="QString" key="PE.Profile.Icon"></value>
+   <value type="QString" key="PE.Profile.Id">qt.qt5.5132.wasm_32_kit</value>
+   <valuelist type="QVariantList" key="PE.Profile.MutableInfo"/>
+   <value type="QString" key="PE.Profile.Name">Qt %{Qt:Version} WebAssembly</value>
+   <value type="bool" key="PE.Profile.SDK">true</value>
+   <valuelist type="QVariantList" key="PE.Profile.StickyInfo">
+    <value type="QString">QtSupport.QtInformation</value>
+    <value type="QString">PE.Profile.DeviceType</value>
    </valuelist>
   </valuemap>
  </data>
  <data>
   <variable>Profile.Count</variable>
-  <value type="int">8</value>
+  <value type="int">11</value>
  </data>
  <data>
   <variable>Profile.Default</variable>

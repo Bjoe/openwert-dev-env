@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorToolChains>
-<!-- Written by QtCreator 4.11.0, 2020-01-02T06:04:49. -->
+<!-- Written by QtCreator 4.11.2, 2020-04-14T15:04:47. -->
 <qtcreator>
  <data>
   <variable>ToolChain.0</variable>
@@ -106,6 +106,60 @@
    <value type="bool" key="ProjectExplorer.ToolChain.Autodetect">false</value>
    <value type="QString" key="ProjectExplorer.ToolChain.DisplayName">GCC 7.4.0 (C, x86 64bit in /home/build/openwrt/staging_dir/toolchain-x86_64_gcc-7.4.0_musl/bin)</value>
    <value type="QString" key="ProjectExplorer.ToolChain.Id">ProjectExplorer.ToolChain.Gcc:{344b5567-ea2a-456e-b074-53ef63f3d5b6}</value>
+   <value type="int" key="ProjectExplorer.ToolChain.Language">1</value>
+   <value type="QString" key="ProjectExplorer.ToolChain.LanguageV2">C</value>
+  </valuemap>
+ </data>
+ <data>
+  <variable>ToolChain.14</variable>
+  <valuemap type="QVariantMap">
+   <value type="QString" key="ProjectExplorer.GccToolChain.OriginalTargetTriple">x86_64-openwrt-linux-musl</value>
+   <value type="QString" key="ProjectExplorer.GccToolChain.Path">/home/build/openwrt/staging_dir/toolchain-x86_64_gcc-7.3.0_musl/bin/x86_64-openwrt-linux-g++</value>
+   <valuelist type="QVariantList" key="ProjectExplorer.GccToolChain.PlatformCodeGenFlags"/>
+   <valuelist type="QVariantList" key="ProjectExplorer.GccToolChain.PlatformLinkerFlags"/>
+   <valuelist type="QVariantList" key="ProjectExplorer.GccToolChain.SupportedAbis">
+    <value type="QString">x86-linux-generic-elf-64bit</value>
+   </valuelist>
+   <value type="QString" key="ProjectExplorer.GccToolChain.TargetAbi">x86-linux-generic-elf-64bit</value>
+   <value type="bool" key="ProjectExplorer.ToolChain.Autodetect">true</value>
+   <value type="QString" key="ProjectExplorer.ToolChain.DisplayName">GCC (C++, x86 64bit in /home/build/openwrt/staging_dir/toolchain-x86_64_gcc-7.3.0_musl/bin)</value>
+   <value type="QString" key="ProjectExplorer.ToolChain.Id">ProjectExplorer.ToolChain.Gcc:{a5b8b5fc-ae7f-4cce-a23b-101204ffd2b4}</value>
+   <value type="int" key="ProjectExplorer.ToolChain.Language">2</value>
+   <value type="QString" key="ProjectExplorer.ToolChain.LanguageV2">Cxx</value>
+  </valuemap>
+ </data>
+ <data>
+  <variable>ToolChain.15</variable>
+  <valuemap type="QVariantMap">
+   <value type="QString" key="ProjectExplorer.GccToolChain.OriginalTargetTriple">x86_64-openwrt-linux-musl</value>
+   <value type="QString" key="ProjectExplorer.GccToolChain.Path">/home/build/openwrt/staging_dir/toolchain-x86_64_gcc-7.3.0_musl/bin/x86_64-openwrt-linux-gcc</value>
+   <valuelist type="QVariantList" key="ProjectExplorer.GccToolChain.PlatformCodeGenFlags"/>
+   <valuelist type="QVariantList" key="ProjectExplorer.GccToolChain.PlatformLinkerFlags"/>
+   <valuelist type="QVariantList" key="ProjectExplorer.GccToolChain.SupportedAbis">
+    <value type="QString">x86-linux-generic-elf-64bit</value>
+   </valuelist>
+   <value type="QString" key="ProjectExplorer.GccToolChain.TargetAbi">x86-linux-generic-elf-64bit</value>
+   <value type="bool" key="ProjectExplorer.ToolChain.Autodetect">true</value>
+   <value type="QString" key="ProjectExplorer.ToolChain.DisplayName">GCC (C, x86 64bit in /home/build/openwrt/staging_dir/toolchain-x86_64_gcc-7.3.0_musl/bin)</value>
+   <value type="QString" key="ProjectExplorer.ToolChain.Id">ProjectExplorer.ToolChain.Gcc:{9e326b16-68da-4928-b7be-8d2e402558dd}</value>
+   <value type="int" key="ProjectExplorer.ToolChain.Language">1</value>
+   <value type="QString" key="ProjectExplorer.ToolChain.LanguageV2">C</value>
+  </valuemap>
+ </data>
+ <data>
+  <variable>ToolChain.16</variable>
+  <valuemap type="QVariantMap">
+   <value type="QString" key="ProjectExplorer.GccToolChain.OriginalTargetTriple">x86_64-openwrt-linux-musl</value>
+   <value type="QString" key="ProjectExplorer.GccToolChain.Path">/home/build/openwrt/staging_dir/toolchain-x86_64_gcc-7.3.0_musl/bin/x86_64-openwrt-linux-gcc-7.3.0</value>
+   <valuelist type="QVariantList" key="ProjectExplorer.GccToolChain.PlatformCodeGenFlags"/>
+   <valuelist type="QVariantList" key="ProjectExplorer.GccToolChain.PlatformLinkerFlags"/>
+   <valuelist type="QVariantList" key="ProjectExplorer.GccToolChain.SupportedAbis">
+    <value type="QString">x86-linux-generic-elf-64bit</value>
+   </valuelist>
+   <value type="QString" key="ProjectExplorer.GccToolChain.TargetAbi">x86-linux-generic-elf-64bit</value>
+   <value type="bool" key="ProjectExplorer.ToolChain.Autodetect">true</value>
+   <value type="QString" key="ProjectExplorer.ToolChain.DisplayName">GCC 7.3.0 (C, x86 64bit in /home/build/openwrt/staging_dir/toolchain-x86_64_gcc-7.3.0_musl/bin)</value>
+   <value type="QString" key="ProjectExplorer.ToolChain.Id">ProjectExplorer.ToolChain.Gcc:{2c67c677-5ad9-464e-bb23-abf25fcd26b7}</value>
    <value type="int" key="ProjectExplorer.ToolChain.Language">1</value>
    <value type="QString" key="ProjectExplorer.ToolChain.LanguageV2">C</value>
   </valuemap>
@@ -257,7 +311,7 @@
  </data>
  <data>
   <variable>ToolChain.Count</variable>
-  <value type="int">14</value>
+  <value type="int">17</value>
  </data>
  <data>
   <variable>Version</variable>
