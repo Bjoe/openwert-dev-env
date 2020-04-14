@@ -10,7 +10,7 @@ services:
     entrypoint:
       - bash
       - /home/build/sdk/set-user-env.sh
-      - set-toolchain-x86-64_gcc-7.4.0_musl-generic-env.sh tmux-startup.sh openwrt-sdk-ide-x86-64-snapshot
+      - set-toolchain-x86-64_gcc-7.3.0_musl-generic-env.sh tmux-startup.sh openwrt-sdk-ide-x86-64-snapshot
 
   openwrt-rootfs:
     image: openwrtorg/sdk:x86-64-18.06.7
