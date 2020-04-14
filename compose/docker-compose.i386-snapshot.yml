@@ -6,7 +6,7 @@ services:
     build:
       args:
         dockerimage: openwrtorg/sdk:x86-generic-19.07-SNAPSHOT
-    hostname: x86-19_07-snap
+    #hostname: x86-19_07-snap
     entrypoint:
       - bash
       - /home/build/sdk/set-user-env.sh

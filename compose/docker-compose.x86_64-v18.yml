@@ -6,7 +6,7 @@ services:
     build:
       args:
         dockerimage: openwrtorg/sdk:x86-64-18.06.7
-    hostname: x86-64-18_06_7
+    #hostname: x86-64-18_06_7
     entrypoint:
       - bash
       - /home/build/sdk/set-user-env.sh

@@ -6,7 +6,7 @@ services:
     build:
       args:
         dockerimage: openwrtorg/sdk:ar71xx-generic-18.06.7
-    hostname: ar71xx-18_06_7
+    #hostname: ar71xx-18_06_7
     entrypoint:
       - bash
       - /home/build/sdk/set-user-env.sh
@@ -14,4 +14,4 @@ services:
 
   openwrt-image-build:
     image: openwrtorg/imagebuilder:ar71xx-generic-18.06.7
-    hostname: build-ar71xx-18_06_7
+    #hostname: build-ar71xx-18_06_7

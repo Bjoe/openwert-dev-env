@@ -8,7 +8,7 @@ services:
       dockerfile: Dockerfile-8devices
       args:
         downloadimage: http://pkg.8devices.com/carambola2/v2.10/OpenWrt-8devices-SDK-v2.10-ar71xx-generic_gcc-5.3.0_musl-1.1.14.Linux-x86_64.tar.bz2
-    hostname: build-8devices-2_10
+    #hostname: build-8devices-2_10
     entrypoint:
       - bash
       - /home/build/sdk/set-user-env.sh
@@ -19,7 +19,7 @@ services:
     build:
       args:
         dockerimage: openwrt-8devices-sdk:latest
-    hostname: 8devices-2_10
+    #hostname: 8devices-2_10
     entrypoint:
       - bash
       - /home/build/sdk/set-user-env.sh

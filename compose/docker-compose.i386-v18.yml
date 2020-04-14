@@ -8,7 +8,7 @@ services:
       dockerfile: Docker-ide-debian
       args:
         dockerimage: openwrtorg/sdk:x86-generic-18.06.4
-    hostname: x86-18_06_4
+    #hostname: x86-18_06_4
     entrypoint:
       - bash
       - /home/build/sdk/set-user-env.sh
