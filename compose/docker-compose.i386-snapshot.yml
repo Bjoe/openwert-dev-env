@@ -1,0 +1,13 @@
+version: "3.6"
+
+services:
+  openwrt-sdk-ide:
+    image: openwrt-sdk-ide:x86-generic-19.07-SNAPSHOT
+    build:
+      args:
+        dockerimage: openwrtorg/sdk:x86-generic-19.07-SNAPSHOT
+    hostname: x86-19_07-snap
+    entrypoint:
+      - bash
+      - /home/build/sdk/set-user-env.sh
+      - set-toolchain-i386_gcc-7.4.0_musl-pentium4-generic-env.sh tmux-startup.sh openwrt-sdk-ide-i386-snapshot

@@ -2,12 +2,12 @@ version: "3.6"
 
 services:
   openwrt-sdk-ide:
+    image: openwrt-sdk-ide:latest
     build:
       context: .
       dockerfile: Docker-ide-debian
       args:
         dockerimage: openwrtorg/sdk:latest
-    container_name: openwrt-sdk-ide-dev
     network_mode: "host"
     privileged: true
     security_opt:
@@ -17,153 +17,25 @@ services:
     devices:
       - /dev/dri:/dev/dri
     environment:
-      - GROUP_ID=${GROUP_ID}
-      - USER_ID=${USER_ID}
-      - SSH_AUTH_SOCK=${SSH_AUTH_SOCK}
-      - DISPLAY=${DISPLAY}
+      - GROUP_ID
+      - USER_ID
+      - SSH_AUTH_SOCK
+      - DISPLAY
+      - PATH
     volumes:
       - /dev/bus/usb:/dev/bus/usb
       - ../bin:/home/build/openwrt/bin
       - ../config:/home/build/.config
       - ../sdk:/home/build/sdk
+      - ../build-output:/home/build/build-output
+      - ../sources:/home/build/sources
+      - $HOME/.Xauthority:/home/build/.Xauthority
       - $HOME:/home/$USER
       - /tmp:/tmp
     entrypoint:
-      - bash 
+      - bash
       - /home/build/sdk/set-user-env.sh
       - set-toolchain-generic-env.sh tmux-startup.sh openwrt-sdk-ide
-
-  openwrt-sdk-ide-ar71xx:
-    image: openwrt-sdk-ide:ar71xx-generic-18.06.4
-    build:
-      context: .
-      dockerfile: Docker-ide-debian
-      args:
-        dockerimage: openwrtorg/sdk:ar71xx-generic-18.06.4
-    container_name: openwrt-sdk-ide-ar71xx-dev
-    network_mode: "host"
-    privileged: true
-    security_opt:
-      - seccomp=unconfined
-    cap_add:
-      - SYS_PTRACE
-    devices:
-      - /dev/dri:/dev/dri
-    environment:
-      - GROUP_ID=${GROUP_ID}
-      - USER_ID=${USER_ID}
-      - SSH_AUTH_SOCK=${SSH_AUTH_SOCK}
-      - DISPLAY=${DISPLAY}
-    volumes:
-      - /dev/bus/usb:/dev/bus/usb
-      - ../bin:/home/build/openwrt/bin
-      - ../config:/home/build/.config
-      - ../sdk:/home/build/sdk
-      - $HOME:/home/$USER
-      - /tmp:/tmp
-    entrypoint:
-      - bash 
-      - /home/build/sdk/set-user-env.sh
-      - set-toolchain-mips_24kc_gcc-7.3.0_musl-ar71xx-generic-env.sh tmux-startup.sh openwrt-sdk-ide-ar71xx
-
-  openwrt-sdk-ide-i386-stable:
-    image: openwrt-sdk-ide:x86-generic-18.06.4
-    build:
-      context: .
-      dockerfile: Docker-ide-debian
-      args:
-        dockerimage: openwrtorg/sdk:x86-generic-18.06.4
-    container_name: openwrt-sdk-ide-i386-stable-dev
-    network_mode: "host"
-    privileged: true
-    security_opt:
-      - seccomp=unconfined
-    cap_add:
-      - SYS_PTRACE
-    devices:
-      - /dev/dri:/dev/dri
-    environment:
-      - GROUP_ID=${GROUP_ID}
-      - USER_ID=${USER_ID}
-      - SSH_AUTH_SOCK=${SSH_AUTH_SOCK}
-      - DISPLAY=${DISPLAY}
-    volumes:
-      - /dev/bus/usb:/dev/bus/usb
-      - ../bin:/home/build/openwrt/bin
-      - ../config:/home/build/.config
-      - ../sdk:/home/build/sdk
-      - $HOME:/home/$USER
-      - /tmp:/tmp
-    entrypoint:
-      - bash 
-      - /home/build/sdk/set-user-env.sh
-      - set-toolchain-i386_gcc-7.3.0_musl-pentium4-generic-env.sh tmux-startup.sh openwrt-sdk-ide-i386-stable
-
-  openwrt-sdk-ide-i386-snapshot:
-    image: openwrt-sdk-ide:x86-generic-19.07-SNAPSHOT
-    build:
-      context: .
-      dockerfile: Docker-ide-debian
-      args:
-        dockerimage: openwrtorg/sdk:x86-generic-19.07-SNAPSHOT
-    container_name: openwrt-sdk-ide-i386-snapshot-dev
-    network_mode: "host"
-    privileged: true
-    security_opt:
-      - seccomp=unconfined
-    cap_add:
-      - SYS_PTRACE
-    devices:
-      - /dev/dri:/dev/dri
-    environment:
-      - GROUP_ID=${GROUP_ID}
-      - USER_ID=${USER_ID}
-      - SSH_AUTH_SOCK=${SSH_AUTH_SOCK}
-      - DISPLAY=${DISPLAY}
-    volumes:
-      - /dev/bus/usb:/dev/bus/usb
-      - ../bin:/home/build/openwrt/bin
-      - ../config:/home/build/.config
-      - ../sdk:/home/build/sdk
-      - $HOME:/home/$USER
-      - /tmp:/tmp
-    entrypoint:
-      - bash 
-      - /home/build/sdk/set-user-env.sh
-      - set-toolchain-i386_gcc-7.4.0_musl-pentium4-generic-env.sh tmux-startup.sh openwrt-sdk-ide-i386-snapshot
-
-  openwrt-sdk-ide-x86-64-snapshot:
-    image: openwrtorg/sdk:x86-64-19.07-SNAPSHOT
-    build:
-      context: .
-      dockerfile: Docker-ide-debian
-      args:
-        dockerimage: openwrtorg/sdk:x86-64-19.07-SNAPSHOT
-    container_name: openwrt-sdk-ide-x86-64-snapshot-dev
-    network_mode: "host"
-    privileged: true
-    security_opt:
-      - seccomp=unconfined
-    cap_add:
-      - SYS_PTRACE
-    devices:
-      - /dev/dri:/dev/dri
-    environment:
-      - GROUP_ID=${GROUP_ID}
-      - USER_ID=${USER_ID}
-      - SSH_AUTH_SOCK=${SSH_AUTH_SOCK}
-      - DISPLAY=${DISPLAY}
-    volumes:
-      - /dev/bus/usb:/dev/bus/usb
-      - ../bin:/home/build/openwrt/bin
-      - ../config:/home/build/.config
-      - ../sdk:/home/build/sdk
-      - $HOME:/home/$USER
-      - /tmp:/tmp
-    entrypoint:
-      - bash 
-      - /home/build/sdk/set-user-env.sh
-      - set-toolchain-x86-64_gcc-7.4.0_musl-generic-env.sh tmux-startup.sh openwrt-sdk-ide-x86-64-snapshot
 
   openwrt-rootfs:
     #build:
@@ -182,31 +54,11 @@ services:
     #networks:
       #- mynet
 
-  openwrt-image-build-ar71xx:
-    image: openwrtorg/imagebuilder:ar71xx-generic-18.06.4
-    network_mode: "host"
-    user: 0:0
-    environment:
-      - GROUP_ID=${GROUP_ID}
-      - USER_ID=${USER_ID}
-      - SSH_AUTH_SOCK=${SSH_AUTH_SOCK}
-      - DISPLAY=${DISPLAY}
-    volumes:
-      - ../bin:/home/build/openwrt/bin
-      - ../sdk:/home/build/sdk
-      - $HOME:/home/$USER
-      - /tmp:/tmp
-    entrypoint:
-      - bash
-      - /home/build/sdk/set-user-env.sh
-      - build-startup.sh
-
   openwrt-image-build:
     image: openwrt-image-build
     build:
       context: .
       dockerfile: Dockerfile-openwrt
-    container_name: openwrt-image-build-dev
     network_mode: "host"
     user: 0:0
     privileged: true
@@ -217,17 +69,18 @@ services:
     devices:
       - /dev/dri:/dev/dri
     environment:
-      - GROUP_ID=${GROUP_ID}
-      - USER_ID=${USER_ID}
-      - SSH_AUTH_SOCK=${SSH_AUTH_SOCK}
-      - DISPLAY=${DISPLAY}
+      - GROUP_ID
+      - USER_ID
+      - SSH_AUTH_SOCK
+      - DISPLAY
     volumes:
       - /dev/bus/usb:/dev/bus/usb
       - $HOME:/home/$USER
+      - ../bin:/home/build/openwrt/bin
       - ../sdk:/home/build/sdk
       - /tmp:/tmp
     entrypoint:
-      - bash 
+      - bash
       - /home/build/sdk/set-user-env.sh
       - build-startup.sh
 

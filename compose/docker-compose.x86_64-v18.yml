@@ -1,0 +1,16 @@
+version: "3.6"
+
+services:
+  openwrt-sdk-ide:
+    image: openwrt-sdk-ide:x86-64-18.06.7
+    build:
+      args:
+        dockerimage: openwrtorg/sdk:x86-64-18.06.7
+    hostname: x86-64-18_06_7
+    entrypoint:
+      - bash
+      - /home/build/sdk/set-user-env.sh
+      - set-toolchain-x86-64_gcc-7.4.0_musl-generic-env.sh tmux-startup.sh openwrt-sdk-ide-x86-64-snapshot
+
+  openwrt-rootfs:
+    image: openwrtorg/sdk:x86-64-18.06.7

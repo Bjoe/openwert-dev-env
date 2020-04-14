@@ -1,0 +1,15 @@
+version: "3.6"
+
+services:
+  openwrt-sdk-ide:
+    image: openwrt-sdk-ide:x86-generic-18.06.4
+    build:
+      context: .
+      dockerfile: Docker-ide-debian
+      args:
+        dockerimage: openwrtorg/sdk:x86-generic-18.06.4
+    hostname: x86-18_06_4
+    entrypoint:
+      - bash
+      - /home/build/sdk/set-user-env.sh
+      - set-toolchain-i386_gcc-7.3.0_musl-pentium4-generic-env.sh tmux-startup.sh openwrt-sdk-ide-i386-stable
