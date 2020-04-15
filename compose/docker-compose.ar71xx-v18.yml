@@ -10,7 +10,7 @@ services:
     entrypoint:
       - bash
       - /home/build/sdk/set-user-env.sh
-      - set-toolchain-mips_24kc_gcc-7.3.0_musl-ar71xx-generic-env.sh tmux-startup.sh openwrt-sdk-ide-ar71xx
+      - set-toolchain-mips_24kc_gcc-7.3.0_musl-ar71xx-generic-env.sh tmux-startup.sh openwrt-sdk-ide-ar71xx-v19
 
   openwrt-image-build:
     image: openwrtorg/imagebuilder:ar71xx-generic-18.06.7
