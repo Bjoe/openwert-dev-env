@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE QtCreatorSession>
+<!-- Written by QtCreator 4.11.2, 2020-04-15T06:42:46. -->
+<qtcreator>
+ <data>
+  <variable>CascadeSetActive</variable>
+  <value type="bool">false</value>
+ </data>
+ <data>
+  <variable>Color</variable>
+  <value type="QString">#666666</value>
+ </data>
+ <data>
+  <variable>EditorSettings</variable>
+  <value type="QByteArray">AAAAD0VkaXRvck1hbmFnZXJWNQAAAAQAAABMAC8AaABvAG0AZQAvAGIAdQBpAGwAZAAvAHMAbwB1AHIAYwBlAHMALwB1AGMAaQAvAEMATQBhAGsAZQBMAGkAcwB0AHMALgB0AHgAdAAAAAwAAAAAGAAAAAEAAAAAAAAAAAAAAAsAAAARAAAAAAAAAG4ALwBoAG8AbQBlAC8AYgB1AGkAbABkAC8AcwBvAHUAcgBjAGUAcwAvAGwAaQBiAHUAYgBvAHgALwBlAHgAYQBtAHAAbABlAHMALwByAHUAbgBxAHUAZQB1AGUALQBlAHgAYQBtAHAAbABlAC4AYwAAAAwAAAAAHAAAAAEAAAAAAAAAAAAAAAEAAAABAAAAAQAAAAAAAABUAC8AaABvAG0AZQAvAGIAdQBpAGwAZAAvAHMAbwB1AHIAYwBlAHMALwBsAGkAYgB1AGIAbwB4AC8AYgBsAG8AYgBtAHMAZwBfAGoAcwBvAG4ALgBjAAAADAAAAAAcAAAAAQAAAAAAAAAAAAAAFQAAAA4AAAABAAAAAAAAAFQALwBoAG8AbQBlAC8AYgB1AGkAbABkAC8AcwBvAHUAcgBjAGUAcwAvAGwAaQBiAHUAYgBvAHgALwBDAE0AYQBrAGUATABpAHMAdABzAC4AdAB4AHQAAAAMAAAAABgAAAABAAAAHwAAAAAAAAApAAAAHQAAAAAAAAAAAAAACQAAAAVlbXB0eQAAAAA=</value>
+ </data>
+ <data>
+  <variable>ProjectDependencies</variable>
+  <valuemap type="QVariantMap"/>
+ </data>
+ <data>
+  <variable>ProjectList</variable>
+  <valuelist type="QVariantList">
+   <value type="QString">/home/build/sources/uci/CMakeLists.txt</value>
+   <value type="QString">/home/build/sources/ubus/CMakeLists.txt</value>
+   <value type="QString">/home/build/sources/uci-example/CMakeLists.txt</value>
+   <value type="QString">/home/build/sources/UCI-dev/CMakeLists.txt</value>
+   <value type="QString">/home/build/sources/ubus-startstop/CMakeLists.txt</value>
+   <value type="QString">/home/build/sources/Test/CMakeLists.txt</value>
+   <value type="QString">/home/build/sources/procd/CMakeLists.txt</value>
+   <value type="QString">/home/build/sources/libubox/CMakeLists.txt</value>
+  </valuelist>
+ </data>
+ <data>
+  <variable>StartupProject</variable>
+  <value type="QString">/home/build/sources/libubox/CMakeLists.txt</value>
+ </data>
+ <data>
+  <variable>value-ActiveMode</variable>
+  <value type="QString">Edit</value>
+ </data>
+ <data>
+  <variable>value-Breakpoints</variable>
+  <valuelist type="QVariantList"/>
+ </data>
+ <data>
+  <variable>value-ProjectTree.ExpandData</variable>
+  <valuelist type="QVariantList">
+   <valuelist type="QVariantList">
+    <value type="QString">/home/build/sources/libubox/examples</value>
+    <value type="QString">runqueue-example</value>
+   </valuelist>
+   <valuelist type="QVariantList">
+    <value type="QString">/home/build/sources/libubox</value>
+    <value type="QString">blobmsg_json</value>
+   </valuelist>
+  </valuelist>
+ </data>
+ <data>
+  <variable>value-TaskWindow.Categories</variable>
+  <valuelist type="QVariantList">
+   <value type="QString">Task.Category.QmlAnalysis</value>
+  </valuelist>
+ </data>
+ <data>
+  <variable>value-TaskWindow.IncludeWarnings</variable>
+  <value type="bool">true</value>
+ </data>
+ <data>
+  <variable>valueKeys</variable>
+  <valuelist type="QVariantList">
+   <value type="QString">ActiveMode</value>
+   <value type="QString">Breakpoints</value>
+   <value type="QString">ProjectTree.ExpandData</value>
+   <value type="QString">TaskWindow.Categories</value>
+   <value type="QString">TaskWindow.IncludeWarnings</value>
+  </valuelist>
+ </data>
+</qtcreator>

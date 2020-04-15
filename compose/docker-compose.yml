@@ -25,7 +25,7 @@ services:
     volumes:
       - /dev/bus/usb:/dev/bus/usb
       - ../bin:/home/build/openwrt/bin
-      - ../config:/home/build/.config
+      - ../config/$DOCKER_CONTAINER:/home/build/.config
       - ../sdk:/home/build/sdk
       - ../build-output:/home/build/build-output
       - ../sources:/home/build/sources
