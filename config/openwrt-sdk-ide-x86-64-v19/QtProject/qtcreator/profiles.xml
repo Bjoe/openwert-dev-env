@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProfiles>
-<!-- Written by QtCreator 4.11.2, 2020-04-15T06:38:28. -->
+<!-- Written by QtCreator 4.11.2, 2020-04-17T09:26:16. -->
 <qtcreator>
  <data>
   <variable>Kit.IrrelevantAspects</variable>
@@ -22,7 +22,7 @@
      <value type="QString" key="Toolset"></value>
     </valuemap>
     <value type="QString" key="CMakeProjectManager.CMakeKitInformation">qt.tools.cmake</value>
-    <value type="QString" key="Debugger.Information">{66743c1f-a69b-4328-8453-3a93835b13c5}</value>
+    <value type="QString" key="Debugger.Information">{00e4b572-8a80-4da8-adf2-f84ab166860f}</value>
     <value type="QString" key="PE.Profile.Device">{b664a4f1-7218-4660-b9c5-6b5db114f633}</value>
     <value type="QString" key="PE.Profile.DeviceType">GenericLinuxOsType</value>
     <valuelist type="QVariantList" key="PE.Profile.Environment">
@@ -84,8 +84,8 @@
    <value type="QString" key="PE.Profile.Name">Desktop Qt %{Qt:Version} GCC 64bit</value>
    <value type="bool" key="PE.Profile.SDK">true</value>
    <valuelist type="QVariantList" key="PE.Profile.StickyInfo">
-    <value type="QString">QtSupport.QtInformation</value>
     <value type="QString">PE.Profile.DeviceType</value>
+    <value type="QString">QtSupport.QtInformation</value>
    </valuelist>
   </valuemap>
  </data>
@@ -128,8 +128,8 @@
    <value type="QString" key="PE.Profile.Name">Desktop Qt %{Qt:Version} GCC 64bit</value>
    <value type="bool" key="PE.Profile.SDK">true</value>
    <valuelist type="QVariantList" key="PE.Profile.StickyInfo">
-    <value type="QString">QtSupport.QtInformation</value>
     <value type="QString">PE.Profile.DeviceType</value>
+    <value type="QString">QtSupport.QtInformation</value>
    </valuelist>
   </valuemap>
  </data>
@@ -172,8 +172,8 @@
    <value type="QString" key="PE.Profile.Name">Qt %{Qt:Version} WebAssembly</value>
    <value type="bool" key="PE.Profile.SDK">true</value>
    <valuelist type="QVariantList" key="PE.Profile.StickyInfo">
-    <value type="QString">QtSupport.QtInformation</value>
     <value type="QString">PE.Profile.DeviceType</value>
+    <value type="QString">QtSupport.QtInformation</value>
    </valuelist>
   </valuemap>
  </data>
@@ -216,8 +216,8 @@
    <value type="QString" key="PE.Profile.Name">Desktop Qt %{Qt:Version} GCC 64bit</value>
    <value type="bool" key="PE.Profile.SDK">true</value>
    <valuelist type="QVariantList" key="PE.Profile.StickyInfo">
-    <value type="QString">QtSupport.QtInformation</value>
     <value type="QString">PE.Profile.DeviceType</value>
+    <value type="QString">QtSupport.QtInformation</value>
    </valuelist>
   </valuemap>
  </data>
@@ -253,8 +253,8 @@
    <value type="QString" key="PE.Profile.Name">Qt %{Qt:Version} WebAssembly</value>
    <value type="bool" key="PE.Profile.SDK">true</value>
    <valuelist type="QVariantList" key="PE.Profile.StickyInfo">
-    <value type="QString">QtSupport.QtInformation</value>
     <value type="QString">PE.Profile.DeviceType</value>
+    <value type="QString">QtSupport.QtInformation</value>
    </valuelist>
   </valuemap>
  </data>
@@ -297,8 +297,8 @@
    <value type="QString" key="PE.Profile.Name">Desktop Qt %{Qt:Version} GCC 64bit</value>
    <value type="bool" key="PE.Profile.SDK">true</value>
    <valuelist type="QVariantList" key="PE.Profile.StickyInfo">
-    <value type="QString">QtSupport.QtInformation</value>
     <value type="QString">PE.Profile.DeviceType</value>
+    <value type="QString">QtSupport.QtInformation</value>
    </valuelist>
   </valuemap>
  </data>
