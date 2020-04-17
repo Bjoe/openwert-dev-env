@@ -15,7 +15,7 @@ Mounted dir
 * `bin` will be mounted in docker `/home/build/openwrt/bin/`
 * `build-output` will be mounted in docker `/home/build/build-output/`
 * `sdk` will be mounted in docker `/home/build/sdk`
-* `$HOME` will be mounted in docker `$HOME`
+* `$HOME` will be mounted in docker `/home/$USER`
 
 An OpenWRT toolchain for cmake you will found in:
 
