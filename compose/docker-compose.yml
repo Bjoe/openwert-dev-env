@@ -56,9 +56,9 @@ services:
 
   openwrt-image-build:
     image: openwrt-image-build
-    build:
-      context: .
-      dockerfile: Dockerfile-openwrt
+    #build:
+    #  context: .
+    #  dockerfile: Dockerfile-openwrt
     network_mode: "host"
     user: 0:0
     privileged: true
@@ -78,6 +78,7 @@ services:
       - $HOME:/home/$USER
       - ../bin:/home/build/openwrt/bin
       - ../sdk:/home/build/sdk
+      - ../sources:/home/build/sources
       - /tmp:/tmp
     entrypoint:
       - bash
